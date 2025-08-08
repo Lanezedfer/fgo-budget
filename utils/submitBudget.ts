@@ -25,6 +25,15 @@ const submitBudget = async ({ fragments, quartz, tickets, tier }: Input) => {
           total: result.total.toString(),
         },
       });
+    } else {
+      router.push({
+        pathname: "/results/priority",
+        params: {
+          allowance: result.allowance.toString(),
+          ticket: result.ticket.toString(),
+          total: result.total.toString(),
+        },
+      });
     }
   }
 };
