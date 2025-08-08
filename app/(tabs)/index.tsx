@@ -10,6 +10,7 @@ import {
   container,
   mainContainer,
 } from "@/styles/styleConstants";
+import submitBudget from "@/utils/submitBudget";
 import { useMemo, useState } from "react";
 import { KeyboardAvoidingView, Pressable, Text } from "react-native";
 import RadioGroup, { RadioButtonProps } from "react-native-radio-buttons-group";
@@ -34,6 +35,8 @@ const Index = () => {
   const [tickets, setTickets] = useState("");
   const [fragments, setFragments] = useState("");
   const [tier, setTier] = useState<string>("1");
+
+  const submit = () => submitBudget({ fragments, quartz, tickets, tier });
 
   return (
     <SafeAreaView style={container}>
@@ -68,6 +71,7 @@ const Index = () => {
           }}
         />
         <Pressable
+          onPress={submit}
           style={({ pressed }) => [
             btn,
             pressed && btn__pressed,
