@@ -12,9 +12,11 @@ const calcBudget = ({ fragment, sq, ticket }: Input) => {
   const total = allowance + backup;
 
   if (total >= PITY) {
-    return { allowance, guaranteed: true, ticket, total };
+    const amount = total - PITY;
+    return { allowance, amount, guaranteed: true, ticket, total };
   } else {
-    return { allowance, guaranteed: false, ticket, total };
+    const amount = allowance;
+    return { allowance, amount, guaranteed: false, ticket, total };
   }
 };
 

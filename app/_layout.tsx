@@ -8,6 +8,10 @@ const RootLayout = () => {
         name="results/guaranteed"
         options={{ headerShown: false }}
       />
+      <Stack.Screen
+        name="results/nonPriority"
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="results/priority" options={{ headerShown: false }} />
     </Stack>
   );
