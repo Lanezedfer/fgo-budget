@@ -38,6 +38,7 @@ const Setting = () => {
   }, []);
 
   const handleChange = (key: SettingKey, value: string) => {
+    if (value.length > 2) value = value.slice(0, 2);
     setSetting((prev) => ({ ...prev, [key]: value }));
   };
 
