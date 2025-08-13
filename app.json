@@ -13,7 +13,8 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.lanezedfer.fgobudget"
     },
     "plugins": [
       "expo-router",
@@ -29,6 +30,19 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ab7466f1-c7b9-4ed3-9c0b-db650c29cb41"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ab7466f1-c7b9-4ed3-9c0b-db650c29cb41"
+    },
+    "ios": {}
   }
 }
